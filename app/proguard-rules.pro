@@ -40,6 +40,19 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
+####################################################################################################
+# ACRA (used by buddybuild)
+####################################################################################################
+
+# Restore some Source file names and restore approximate line numbers in the stack traces,
+# otherwise the stack traces are pretty useless
+-keepattributes SourceFile,LineNumberTable
+
+# ACRA needs "annotations"
+-keepattributes *Annotation*
+
+# Keep all the ACRA classes
+-keep class org.acra.** { *; }
 
 ####################################################################################################
 # Adjust
