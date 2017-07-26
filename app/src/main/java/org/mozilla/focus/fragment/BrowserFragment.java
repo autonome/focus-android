@@ -646,7 +646,7 @@ public class BrowserFragment extends WebFragment implements View.OnClickListener
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(0, R.anim.erase_animation)
-                .replace(R.id.container, HomeFragment.create(), HomeFragment.FRAGMENT_TAG)
+                .replace(R.id.container, UrlInputFragment.createWithBackground(), UrlInputFragment.FRAGMENT_TAG)
                 .commit();
 
         ViewUtils.showBrandedSnackbar(getActivity().findViewById(android.R.id.content),
